@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CofeeRoom</title>
+
+    <!-- ------------------------------------Карты яндекс------------------------------------------------------------------------ -->
+    <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=ваш API-ключ&load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map ("map", {
+                center:[59.9174, 30.3250],
+                zoom: 10
+            }); 
+            
+            myPlacemark = new ymaps.Placemark([59.9174, 30.3250], {
+                hintContent: 'Санкт-Петербург!',
+                balloonContent: 'CofeeRoom'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+ <!-- -------------------------------------------------------------- --> 
+</head>
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="header__container">
+                <a href="#" class="header__logo"><h6>COFFEE <br> <b>ROOM</b> </h6> </a>
+                <div class="header__menu menu">
+                    <div class="menu__icon">
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li><a data-goto=".page__section_1" href="#" class="menu__link">Меню</a> </li>
+                            <li><a data-goto=".page__section_2" href="#" class="menu__link">Карта</a> </li>
+                            <li><a data-goto=".page__section_3" href="#" class="menu__link">Акции</a> </li>
+                            <li><a data-goto=".page__section_4" href="#" class="menu__link">Оставить отзыв</a> </li>
+                            <li>
+                                <a href="#" class="menu__link">O Компании</a>
+                                <span class="menu__arrow"></span>
+                                <ul class="menu__sub-list">
+                                    <li>
+                                        <a href=" " class="menu__sub-link"> Раздел страницы 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="menu__sub-link"> Раздел страницы 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="menu__sub-link"> Раздел страницы 3</a>
+                                    </li>
+                                </ul>
+                             </li>
+                            <ul class="menu_ssylki" > 
+                                <li  >
+                                    <a style="padding-left: 80px;" href="https://vk.com/" target="_blank" class="menu__link"><img   src="icons8-vk-48.png" alt=""></a>
+                                    <a style="padding: 0px;" href="https://telegram.org/?1" target="_blank" class="menu__link" ><img  style="height: -50px;"  src="icons8-телеграмма-app-50.png" alt=""></a>
+                                </li>
+                            </ul>
+                         </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="page">
+            <section class="page__section page__section_0">
+                <div class="page__logoCofee">
+                    <img style="height: 30%;width: 30%;" src="Логотип.JPG" alt="">
+                </div>
+                <h6 style="font-size: 60px; text-align: center;font-weight: 400; color: rgb(163, 163, 163);font-family:Arial, Helvetica, sans-serif; margin-bottom: 40px;">ПРЕДЛАГАЮ ДРУЖИТЬ! <br>УСТАНОВИ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ COFFEE ROOM И ПОЛУЧИ СКИДКУ НА ПЕРВЫЙ ЗАКАЗ 60%</h6>
+
+                <h5 style="font-size: 30px; color: rgb(163, 163, 163); margin-bottom: 50px;">Все доступные бонусы и специальные предложения всегда под рукой</h5>
+
+            
+                <div class="page__button">
+                    <button class="app">App Store</button>
+                    <button class="google">Google Play</button>
+                    
+                </div>
+            </section>
+            <section class="page__section page__section_1">
+                <h1 class="page__title">Mеню</h1>
+            
+                <div class="page__text">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi repellat quasi consequuntur corporis fugiat laboriosam voluptatum excepturi aperiam, perspiciatis labore delectus alias quibusdam nulla, impedit odit? Error cumque enim accusantium!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi repellat quasi consequuntur corporis fugiat laboriosam voluptatum excepturi aperiam, perspiciatis labore delectus alias quibusdam nulla, impedit odit? Error cumque enim accusantium</p>
+                    
+                </div>
+            </section>
+
+            <section class="page__section page__section_2">
+                <h2 class="page__sub-title">Карта </h2>
+                <div id="map" style="width: 600px; height: 400px"></div>
+                <div class="page__text">
+                </div>
+            </section>
+
+            <section class="page__section page__section_3">
+                <h2 class="page__sub-title">Акции</h2>
+                <div class="page__text">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi repellat quasi consequuntur corporis fugiat laboriosam voluptatum excepturi aperiam, perspiciatis labore delectus alias quibusdam nulla, impedit odit? Error cumque enim accusantium!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi repellat quasi consequuntur corporis fugiat laboriosam voluptatum excepturi aperiam, perspiciatis labore delectus alias quibusdam nulla, impedit odit? Error cumque enim accusantium</p>
+                    
+                </div>
+            </section>
+            
+            <section class="page__section page__section_4">
+                <h2 class="page__sub-title">Отзыв</h2>
+                <div class="page__text">
+                    <p>ОТЗЫВЫ</p>
+                    
+                </div>
+            </section>
+        </main>
+
+    </div>
+    <script src="cofeeRoom.js"></script>
+</body>
+</html>
