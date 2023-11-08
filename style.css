@@ -197,7 +197,9 @@ body._touch .menu__link {
 
 /*----------------------------------------------------------------*/
 
-
+.page__section {
+    text-align: center
+}
 .menu__sub-list {
     position: absolute;
     top: 100%;
